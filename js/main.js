@@ -7,7 +7,7 @@ const loader = document.getElementById("loader");
 
 let introSeen = false;
 try {
-  introSeen = sessionStorage.getItem("orlova-intro") === "1";
+  introSeen = sessionStorage.getItem("intro-seen") === "1";
 } catch {
   introSeen = true;
 }
@@ -21,7 +21,7 @@ if (!loader || reduce || introSeen) {
   markReady();
 } else {
   window.addEventListener("load", () => {
-    try { sessionStorage.setItem("orlova-intro", "1"); } catch { /* private mode */ }
+    try { sessionStorage.setItem("intro-seen", "1"); } catch { /* private mode */ }
     window.setTimeout(() => {
       loader.classList.add("is-done");
       markReady();
