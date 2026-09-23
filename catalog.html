@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f3f3f1">
+  <meta name="description" content="Каталог работ Лины Орловой: графика, монохромная живопись и фотография.">
+  <title>Каталог — Лина Орлова</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;1,500&family=Manrope:wght@300;400;500;600&family=Unbounded:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script>document.documentElement.classList.add("js");</script>
+</head>
+<body>
+  <!--
+    Как заменить работу:
+    1. Положите новое фото в папку images/ (или укажите другой src).
+    2. Поправьте название, год, технику и размер в карточке ниже.
+    Фильтр смотрит на data-kind: графика, живопись или фотография.
+  -->
+  <div class="progress" id="progress" aria-hidden="true"></div>
+
+  <header class="header is-scrolled">
+    <a class="logo" href="index.html">
+      <span class="logo-mark">ЛО</span>
+      <span class="logo-name">Лина Орлова</span>
+    </a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav" aria-label="Меню">
+      <span></span>
+    </button>
+    <nav class="nav" id="nav">
+      <a href="index.html#about">Практика</a>
+      <a href="catalog.html" aria-current="page">Каталог</a>
+      <a href="index.html#contact">Связь</a>
+    </nav>
+  </header>
+
+  <main>
+    <header class="page-head">
+      <p class="kicker page-kicker">Работы</p>
+      <div class="page-head-row">
+        <h1>Каталог</h1>
+        <p>Двенадцать листов и холстов. Графика, живопись и фотография — всё, что сейчас можно смотреть медленно.</p>
+      </div>
+    </header>
+    <div class="filters" role="toolbar" aria-label="Фильтр работ">
+      <button class="filter is-active" type="button" data-filter="all">Все</button>
+      <button class="filter" type="button" data-filter="графика">Графика</button>
+      <button class="filter" type="button" data-filter="живопись">Живопись</button>
+      <button class="filter" type="button" data-filter="фотография">Фотография</button>
+      <span class="count" id="count">12 работ</span>
+    </div>
+
+    <div class="catalog-grid" id="catalog">
+      <article class="piece" id="zhest" data-kind="графика" data-series="Тело" data-year="2024">
+        <button class="piece-open" type="button">
+          <span class="piece-media"><img src="images/gesture.jpg" width="864" height="1152" alt="Жест. Тушь, бумага, 100 на 70 сантиметров, 2024"></span>
+          <span class="piece-top"><span>01</span><span>2024</span></span>
+          <span class="piece-title">Жест</span>
+          <span class="piece-sub">Тушь, бумага · 100×70 см</span>
+        </button>
+      </article>
+
+      <article class="piece" id="dozhd" data-kind="живопись" data-series="Горизонт" data-year="2024">
+        <button class="piece-open" type="button">
+          <span class="piece-media"><img src="images/window.jpg" width="1152" height="864" alt="После дождя. Масло, холст, 90 на 120 сантиметров, 2024" loading="lazy"></span>
+          <span class="piece-top"><span>02</span><span>2024</span></span>
+          <span class="piece-title">После дождя</span>
+          <span class="piece-sub">Масло, холст · 90×120 см</span>
+        </button>
+      </article>
+
+      <article class="piece" id="ruki" data-kind="графика" data-series="Тело" data-year="2025">
+        <button class="piece-open" type="button">
+          <span class="piece-media"><img src="images/hands.jpg" width="864" height="1152" alt="Две руки. Графит, бумага, 70 на 50 сантиметров, 2025" loading="lazy"></span>
+          <span class="piece-top"><span>03</span><span>2025</span></span>
+          <span class="piece-title">Две руки</span>
+          <span class="piece-sub">Графит, бумага · 70×50 см</span>
+        </button>
+      </article>
+
+      <article class="piece" id="portret" data-kind="графика" data-series="Тело" data-year="2022">
+        <button class="piece-open" type="button">
+          <span class="piece-media"><img src="images/mother.jpg" width="864" height="1152" alt="Портрет. Уголь, бумага, 65 на 50 сантиметров, 2022" loading="lazy"></span>
+          <span class="piece-top"><span>04</span><span>2022</span></span>
+          <span class="piece-title">Портрет</span>
+          <span class="piece-sub">Уголь, бумага · 65×50 см</span>
+        </button>
+      </article>
+
+      <article class="piece" id="profil" data-kind="живопись" data-series="Тело" data-year="2025">
+        <button class="piece-open" type="button">
+          <span class="piece-media"><img src="images/profile.jpg" width="1024" height="1024" alt="Профиль. Масло, холст, 80 на 80 сантиметров, 2025" loading="lazy"></span>
+          <span class="piece-top"><span>05</span><span>2025</span></span>
+          <span class="piece-title">Профиль</span>
+          <span class="piece-sub">Масло, холст · 80×80 см</span>
+        </button>
+      </article>
+
+      <article class="piece" id="stul" data-kind="графика" data-series="Тихие комнаты" data-year="2023">
+        <button class="piece-open" type="button">
+          <span class="piece-media"><img src="images/room.jpg" width="864" height="1152" alt="Стул. Тушь, бумага, 76 на 56 сантиметров, 2023" loading="lazy"></span>
+          <span class="piece-top"><span>06</span><span>2023</span></span>
+          <span class="piece-title">Стул</span>
+          <span class="piece-sub">Тушь, бумага · 76×56 см</span>
+        </button>
+      </article>
+
+      <article class="piece piece-wide" id="liniya" data-kind="графика" data-series="Горизонт" data-year="2026">
+        <button class="piece-open" type="button">
+          <span class="piece-media"><img src="images/horizon.jpg" width="1280" height="720" alt="На линии. Графит, бумага, 40 на 90 сантиметров, 2026" loading="lazy"></span>
+          <span class="piece-top"><span>07</span><span>2026</span></span>
+          <span class="piece-title">На линии</span>
+          <span class="piece-sub">Графит, бумага · 40×90 см</span>
+        </button>
+      </article>
+
+      <article class="piece" id="utro" data-kind="фотография" data-series="Тихие комнаты" data-year="2024">
+        <button class="piece-open" type="button">
+          <span class="piece-media"><img src="images/kitchen.jpg" width="1152" height="864" alt="Утро. Фотография, 40 на 30 сантиметров, 2024" loading="lazy"></span>
+          <span class="piece-top"><span>08</span><span>2024</span></span>
+          <span class="piece-title">Утро</span>
+          <span class="piece-sub">Фотография · 40×30 см</span>
+        </button>
+      </article>
+
+      <article class="piece" id="skladki" data-kind="живопись" data-series="Тихие комнаты" data-year="2023">
+        <button class="piece-open" type="button">
+          <span class="piece-media"><img src="images/cloth.jpg" width="1024" height="1024" alt="Складки. Масло, холст, 70 на 70 сантиметров, 2023" loading="lazy"></span>
+          <span class="piece-top"><span>09</span><span>2023</span></span>
+          <span class="piece-title">Складки</span>
+          <span class="piece-sub">Масло, холст · 70×70 см</span>
+        </button>
+      </article>
+
+      <article class="piece" id="ulitsa" data-kind="фотография" data-series="Горизонт" data-year="2025">
+        <button class="piece-open" type="button">
+          <span class="piece-media"><img src="images/street.jpg" width="864" height="1152" alt="Ночная улица. Фотография, 50 на 70 сантиметров, 2025" loading="lazy"></span>
+          <span class="piece-top"><span>10</span><span>2025</span></span>
+          <span class="piece-title">Ночная улица</span>
+          <span class="piece-sub">Фотография · 50×70 см</span>
+        </button>
+      </article>
+
+      <article class="piece" id="komnata" data-kind="фотография" data-series="Тихие комнаты" data-year="2023">
+        <button class="piece-open" type="button">
+          <span class="piece-media"><img src="images/chair.jpg" width="1152" height="864" alt="Пустая комната. Фотография, 60 на 45 сантиметров, 2023" loading="lazy"></span>
+          <span class="piece-top"><span>11</span><span>2023</span></span>
+          <span class="piece-title">Пустая комната</span>
+          <span class="piece-sub">Фотография · 60×45 см</span>
+        </button>
+      </article>
+
+      <article class="piece" id="pyatno" data-kind="графика" data-series="Тело" data-year="2026">
+        <button class="piece-open" type="button">
+          <span class="piece-media"><img src="images/ink.jpg" width="864" height="1152" alt="Пятно. Тушь, бумага, 90 на 60 сантиметров, 2026" loading="lazy"></span>
+          <span class="piece-top"><span>12</span><span>2026</span></span>
+          <span class="piece-title">Пятно</span>
+          <span class="piece-sub">Тушь, бумага · 90×60 см</span>
+        </button>
+      </article>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <span>Лина Орлова</span>
+    <a href="index.html">На главную</a>
+    <span>© 2026</span>
+  </footer>
+
+  <dialog id="viewer" aria-label="Просмотр работы">
+    <div class="viewer-top">
+      <span class="viewer-count" id="viewer-count">01 / 12</span>
+      <button class="viewer-close" id="viewer-close" type="button">Закрыть</button>
+    </div>
+    <div class="viewer-stage">
+      <button class="viewer-arrow" id="viewer-prev" type="button" aria-label="Предыдущая работа">←</button>
+      <img id="viewer-image" alt="">
+      <button class="viewer-arrow" id="viewer-next" type="button" aria-label="Следующая работа">→</button>
+    </div>
+    <div class="viewer-caption">
+      <h2 id="viewer-title"></h2>
+      <p id="viewer-sub"></p>
+      <p id="viewer-series"></p>
+    </div>
+  </dialog>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
